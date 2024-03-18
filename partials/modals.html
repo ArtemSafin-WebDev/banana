@@ -1,0 +1,71 @@
+<div class="modal js-modal" id="callback-modal">
+    <div class="modal__inner">
+        <div class="modal__pattern">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <button class="modal__close js-modal-close">
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="modal__callback">
+            <h3 class="modal__callback-heading">
+                Interested in<br>
+                <img src="/images/modal-callback-arrow.svg" alt="">
+                joining&nbsp;us?
+            </h3>
+            <form action="/" method="POST" class="modal__callback-form js-form">
+                <div class="modal__callback-form-fields">
+                    <div class="modal__callback-form-field">
+                        <div class="modal__callback-form-input-wrapper">
+                            <input type="text" class="modal__callback-form-input" name="your-name" required=""
+                                placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="modal__callback-form-field">
+                        <div class="modal__callback-form-input-wrapper">
+                            <input type="email" class="modal__callback-form-input" name="your-email" required=""
+                                placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="modal__callback-form-field modal__callback-form-field--fullwidth">
+                        <div class="modal__callback-form-input-wrapper">
+                            <input type="text" class="modal__callback-form-input" name="your-subject"
+                                placeholder="Subject">
+                        </div>
+                    </div>
+                    <div class="modal__callback-form-field modal__callback-form-field--fullwidth">
+                        <div class="modal__callback-form-input-wrapper">
+                            <textarea name="your-message" class="modal__callback-form-input"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__callback-form-policy">
+                    By clicking “Send” you agree to <a href="#">Privacy Policy</a>
+                </div>
+                <button class="modal__callback-form-submit" type="submit">
+                    Submit
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="modal__success">
+            <h3 class="modal__success-heading">
+                Message send
+            </h3>
+            <div class="modal__success-text">
+                Our managers will get in contact with you as soon as possible
+            </div>
+            <button class="modal__success-reset">
+                Close
+            </button>
+        </div>
+
+    </div>
+</div>

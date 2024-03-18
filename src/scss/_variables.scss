@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #f1ae5b;
+  --primary-color-hover: #e48e44;
+  --text-color: white;
+  --bg-color: #030200;
+  --tt-runs: "TT Runs Trial", sans-serif;
+  --content-padding: 4rem;
+  --container-width: 160rem;
+
+  @include breakpoint(mobile) {
+    --content-padding: 2rem;
+  }
+}

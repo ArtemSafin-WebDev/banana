@@ -1,0 +1,48 @@
+<div class="loader">
+    <div class="loader__inner">
+        <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" fill="#F1AE5B" />
+            <rect x="46" width="40" height="40" fill="#E48E44" />
+            <rect x="46" y="46" width="40" height="40" fill="#F1AE5B" />
+        </svg>
+    </div>
+</div>
+
+<style>
+    .loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1500;
+        background-color: #020202;
+        display: grid;
+        place-items: center;
+    }
+
+    .loader__inner {
+        width: 8.6rem;
+        height: 8.6rem;
+
+    }
+
+    @media (max-width: 640px) {
+        .loader__inner {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    .loader__inner svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .loader-hidden .loader {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s, visibility 0s linear .4s;
+    }
+</style>

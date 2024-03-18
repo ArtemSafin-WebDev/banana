@@ -1,0 +1,14 @@
+<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+
+    <rect x="14.2217" y="28.3643" width="20" height="2" transform="rotate(-45 14.2217 28.3643)" />
+    <rect x="15.6357" y="14.2222" width="20" height="2" transform="rotate(45 15.6357 14.2222)" />
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M0.000511527 0H0V1.57143H0.000511458L0.000510978 12.5714H1.57194L1.57194 1.57143H12.5714V0H1.57194H0.000511527Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M43.9995 0H44V1.57143H43.9995L43.9995 12.5714H42.4281L42.4281 1.57143H31.4286V0H42.4281H43.9995Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M0.000511527 44H0V42.4286H0.000511458L0.000510978 31.4286H1.57194L1.57194 42.4286H12.5714V44H1.57194H0.000511527Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M43.9995 44H44V42.4286H43.9995L43.9995 31.4286H42.4281L42.4281 42.4286H31.4286V44H42.4281H43.9995Z" />
+
+</svg>
