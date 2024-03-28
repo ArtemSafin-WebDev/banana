@@ -9,6 +9,7 @@ import funding from "./funding";
 import blog from "./blog";
 import tabs from "./tabs";
 import ticker from "./ticker";
+import press from "./press";
 
 document.addEventListener("DOMContentLoaded", () => {
   accordions();
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   funding();
   blog();
   ticker();
+  press();
 });
 
 window.addEventListener("load", () => {
