@@ -8,6 +8,7 @@ import ecosystem from "./ecosystem";
 import funding from "./funding";
 import blog from "./blog";
 import tabs from "./tabs";
+import ticker from "./ticker";
 
 document.addEventListener("DOMContentLoaded", () => {
   accordions();
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ecosystem();
   funding();
   blog();
+  ticker();
 });
 
 window.addEventListener("load", () => {

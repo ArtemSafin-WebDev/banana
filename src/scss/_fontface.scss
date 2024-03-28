@@ -9,6 +9,15 @@
 
 @font-face {
   font-family: "TT Runs Trial";
+  src: url("../fonts/TTRunsTrial-Bold.woff2") format("woff2"),
+    url("../fonts/TTRunsTrial-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Runs Trial";
   src: url("../fonts/TTRunsTrial-Medium.woff2") format("woff2"),
     url("../fonts/TTRunsTrial-Medium.woff") format("woff");
   font-weight: 500;
