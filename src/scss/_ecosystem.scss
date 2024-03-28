@@ -1,0 +1,138 @@
+.ecosystem {
+  @include blockWrapper;
+  margin-bottom: 20rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 10rem;
+  }
+}
+
+.ecosystem__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  grid-row-gap: 5rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+
+.ecosystem__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 7.2rem;
+  line-height: 100%;
+  grid-column: 2 / 3;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 100%;
+  }
+}
+
+.ecosystem__slider {
+  grid-column: 1 / -1;
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    @include breakpointMF(small-tablet) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 2rem;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    @include breakpoint(mobile) {
+      width: 31rem;
+      margin-right: 1.6rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.ecosystem__card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 3rem;
+  gap: 1.6rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 20rem;
+  background-image: linear-gradient(to right bottom, #101010, #060606);
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    gap: 1.6rem;
+    min-height: auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #171717;
+    inset: 0;
+    pointer-events: none;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: radial-gradient(
+      49.09% 49.09% at 50% 50%,
+      rgba(255, 255, 255, 0.91) 0%,
+      rgba(255, 255, 255, 0.15) 79%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.8;
+    filter: blur(200px);
+    width: 25rem;
+    height: 25rem;
+
+    transform: translateY(-50%) translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.ecosystem__card-logo {
+  width: auto;
+  object-fit: contain;
+  object-fit: left center;
+  height: 6rem;
+  align-self: flex-start;
+}
+
+.ecosystem__card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  color: rgba(white, 0.8);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 140%;
+  }
+}

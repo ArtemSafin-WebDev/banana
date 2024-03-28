@@ -246,7 +246,8 @@ canvas.light-splatter {
 
     button,
     a,
-    .about__card {
+    .about__card,
+    input {
       z-index: 41;
       position: relative;
       pointer-events: auto;

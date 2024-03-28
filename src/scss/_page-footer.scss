@@ -227,13 +227,9 @@
   @include breakpointMF(small-tablet) {
     border-right: 1px solid #1b1b1b;
     border-bottom: 1px solid #1b1b1b;
+    margin-bottom: -1px;
     &:nth-child(even) {
       border-right: none;
-    }
-
-    &:nth-last-child(1),
-    &:nth-last-child(2) {
-      border-bottom: none;
     }
   }
 
