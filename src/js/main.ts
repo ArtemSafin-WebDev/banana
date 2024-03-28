@@ -7,9 +7,11 @@ import forms from "./forms";
 import ecosystem from "./ecosystem";
 import funding from "./funding";
 import blog from "./blog";
+import tabs from "./tabs";
 
 document.addEventListener("DOMContentLoaded", () => {
   accordions();
+  tabs();
   menu();
   modals();
   forms();
