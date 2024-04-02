@@ -105,12 +105,13 @@
   height: auto;
   z-index: 5;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
-
+  opacity: 0;
+  visibility: hidden;
   &.active {
     opacity: 1;
     visibility: inherit;
     transition: opacity 0.4s, visibility 0.4s;
-    z-index: 10;
+    z-index: 45;
     position: relative;
   }
 }
@@ -147,17 +148,61 @@
   flex-direction: column;
   flex-grow: 1;
   position: relative;
-  z-index: 1;
+  z-index: 42;
   border: 1px solid #1b1b1b;
   padding: 3.2rem;
   gap: 3rem;
   min-height: 26rem;
+  pointer-events: all;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: radial-gradient(
+      49.09% 49.09% at 50% 50%,
+      #f1ae5b 0%,
+      rgba(241, 174, 91, 0.15) 79%,
+      rgba(241, 174, 91, 0) 100%
+    );
+    opacity: 0.5;
+    filter: blur(100px);
+    width: 33.7rem;
+    height: 33.7rem;
+    left: -15rem;
+    pointer-events: none;
+    z-index: -1;
+    transition: opacity 0.2s;
+    opacity: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+      .portfolio__card-pattern {
+        & > span {
+          &::before,
+          &::after {
+            background-color: #f2b66b !important;
+          }
+        }
+      }
+    }
+  }
 
   @include breakpoint(mobile) {
     padding: 2rem;
     min-height: 22rem;
     gap: 0.8rem;
   }
+}
+
+.portfolio__card-link-wrapper {
+  position: absolute !important;
+  inset: 0;
 }
 
 .portfolio__card-pattern {
@@ -178,6 +223,7 @@
         width: 3.2rem;
         height: 1px;
         background-color: #404040;
+        transition: background-color 0.2s;
 
         @include breakpoint(mobile) {
           width: 2.4rem;
@@ -204,6 +250,7 @@
         width: 3.2rem;
         height: 1px;
         background-color: #404040;
+        transition: background-color 0.2s;
         @include breakpoint(mobile) {
           width: 2.4rem;
         }
@@ -228,6 +275,7 @@
         width: 3.2rem;
         height: 1px;
         background-color: #404040;
+        transition: background-color 0.2s;
         @include breakpoint(mobile) {
           width: 2.4rem;
         }
@@ -253,6 +301,7 @@
         width: 3.2rem;
         height: 1px;
         background-color: #404040;
+        transition: background-color 0.2s;
         @include breakpoint(mobile) {
           width: 2.4rem;
         }
@@ -324,6 +373,18 @@
   text-transform: uppercase;
   color: #b3b3b3;
   position: relative;
+  z-index: 10;
+
+  &:link,
+  &:visited {
+    color: #b3b3b3;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: white;
+    }
+  }
 
   @include breakpoint(mobile) {
     font-style: normal;
@@ -339,6 +400,46 @@
     width: 100%;
     height: 1px;
     background-color: currentColor;
+  }
+}
+
+.portfolio__card-website {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  position: relative;
+  z-index: 10;
+
+  &:link,
+  &:visited {
+    color: #b3b3b3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+  }
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 140%;
+  }
+}
+
+.portfolio__card-link-wrapper:hover ~ .portfolio__card-bottom-row {
+  .portfolio__card-website {
+    color: #f1ae5b;
   }
 }
 

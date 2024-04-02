@@ -1,0 +1,452 @@
+.team {
+  @include blockWrapper;
+  margin-bottom: 11rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 10rem;
+  }
+}
+
+.team__content {
+  @include blockContent;
+}
+
+.team__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 7.2rem;
+  line-height: 100%;
+  margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 100%;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.team__slider {
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .swiper {
+    overflow: visible;
+    @include breakpointMF(small-tablet) {
+      display: contents;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+
+    @include breakpointMF(small-tablet) {
+      border: 1px solid #1f1f1f;
+      margin-left: -1px;
+      margin-top: -1px;
+    }
+
+    @include breakpoint(mobile) {
+      width: 31rem;
+      margin-right: 1.6rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    @include breakpointMF(small-tablet) {
+      display: contents;
+    }
+  }
+}
+
+.team__join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #5e4a31;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #f1ae5b;
+  flex-grow: 1;
+
+  @include breakpointMF(small-tablet) {
+    margin-left: -1px;
+    margin-top: -1px;
+  }
+
+  &:link,
+  &:visited {
+    color: #f1ae5b;
+  }
+}
+
+.team__slider-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 3rem;
+  gap: 1rem;
+  min-height: 22rem;
+  position: relative;
+  z-index: 1;
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 2rem;
+    grid-template-areas: "photo number" "content content";
+    border: 1px solid #1f1f1f;
+  }
+
+  @include breakpointMF(small-tablet) {
+    &:hover {
+      .team__slider-card-image-wrapper {
+        opacity: 0.7;
+        visibility: inherit;
+        transition: opacity 0.2s, visibility 0.2s;
+      }
+
+      .team__slider-card-title {
+        color: #f1ae5b;
+
+        &::before {
+          background-color: #f1ae5b;
+        }
+      }
+
+      .team__slider-card-role {
+        color: #f1ae5b;
+      }
+
+      .team__slider-card-number {
+        color: rgba(#f1ae5b, 0.3);
+      }
+
+      .team__slider-card-social {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.2s, visibility 0.2s;
+      }
+    }
+  }
+}
+
+.team__slider-card-image-wrapper {
+  @include breakpointMF(small-tablet) {
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
+    width: 32rem;
+    height: 32rem;
+    left: 0;
+    top: 0;
+    margin-left: -3.8rem;
+    margin-top: -7.8rem;
+    pointer-events: none;
+    position: absolute;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(89, 89, 89, 0.6),
+        rgba(89, 89, 89, 0.6)
+      );
+    }
+  }
+
+  @include breakpoint(mobile) {
+    border-radius: 50%;
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    flex-shrink: 0;
+    grid-area: photo;
+    overflow: hidden;
+    opacity: 0.7;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(89, 89, 89, 0.6),
+        rgba(89, 89, 89, 0.6)
+      );
+    }
+  }
+}
+
+.team__slider-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.team__slider-card-number {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 130%;
+  letter-spacing: -0.03em;
+  color: rgba(white, 0.3);
+  transition: color 0.2s;
+
+  @include breakpoint(mobile) {
+    grid-area: number;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+    text-align: right;
+    justify-self: flex-end;
+  }
+}
+
+.team__slider-card-content {
+  min-height: 7rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 0.6rem;
+
+  @include breakpoint(mobile) {
+    min-height: auto;
+    gap: 0.6rem;
+    grid-area: content;
+  }
+}
+
+.team__slider-card-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  transition: color 0.2s;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1px;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    background-color: #575757;
+    margin-left: calc(-1 * (3rem + 1px));
+    transition: background-color 0.2s;
+
+    @include breakpoint(mobile) {
+      margin-left: calc(-1 * (2rem + 1px));
+    }
+  }
+}
+
+.team__slider-card-role {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  letter-spacing: -0.03em;
+  color: rgba(white, 0.8);
+  transition: color 0.2s;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+  }
+}
+
+.team__slider-card-bottom-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.team__slider-card-social {
+  flex-shrink: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0s linear 0.2s;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    fill: #f1af5c;
+
+    @include breakpoint(mobile) {
+      fill: white;
+    }
+  }
+
+  & > span {
+    &:nth-child(1) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.6rem;
+        height: 1px;
+        background-color: #f1af5c;
+
+        @include breakpoint(mobile) {
+          background-color: #fff;
+        }
+      }
+
+      &::after {
+        transform: rotate(90deg);
+        transform-origin: left top;
+
+        margin-left: 1px;
+      }
+    }
+    &:nth-child(2) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0.6rem;
+        height: 1px;
+        background-color: #f1af5c;
+        @include breakpoint(mobile) {
+          background-color: #fff;
+        }
+      }
+
+      &::after {
+        transform: rotate(-90deg);
+        transform-origin: right top;
+        margin-right: 1px;
+      }
+    }
+    &:nth-child(3) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0.6rem;
+        height: 1px;
+        background-color: #f1af5c;
+        @include breakpoint(mobile) {
+          background-color: #fff;
+        }
+      }
+
+      &::after {
+        transform: rotate(-90deg);
+        transform-origin: left bottom;
+
+        margin-left: 1px;
+      }
+    }
+    &:nth-child(4) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0.6rem;
+        height: 1px;
+        background-color: #f1af5c;
+        @include breakpoint(mobile) {
+          background-color: #fff;
+        }
+      }
+
+      &::after {
+        transform: rotate(90deg);
+        transform-origin: right bottom;
+        margin-right: 1px;
+      }
+    }
+  }
+}
+
+.team__show-more {
+  padding: 2.7rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+  display: block;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  margin-top: 2rem;
+
+  @include breakpoint(mobile) {
+    order: 10;
+    margin-top: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 100%;
+    padding: 1.9rem;
+    margin-top: 3.2rem;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: white;
+    }
+  }
+}

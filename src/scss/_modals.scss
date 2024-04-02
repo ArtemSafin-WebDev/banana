@@ -419,6 +419,12 @@ textarea.modal__callback-form-input {
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
 
+  &--static {
+    position: static;
+    opacity: 1;
+    visibility: inherit;
+  }
+
   &.active {
     opacity: 1;
     visibility: inherit;

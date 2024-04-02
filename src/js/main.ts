@@ -10,6 +10,8 @@ import blog from "./blog";
 import tabs from "./tabs";
 import ticker from "./ticker";
 import press from "./press";
+import team from "./team";
+import subscribe from "./subscribe";
 
 document.addEventListener("DOMContentLoaded", () => {
   accordions();
@@ -22,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   blog();
   ticker();
   press();
+  team();
+  subscribe();
 });
 
 window.addEventListener("load", () => {
