@@ -135,6 +135,7 @@
 
 .partners__card {
   position: relative;
+  z-index: 41;
   &::before {
     content: "";
     display: block;
@@ -303,7 +304,7 @@
   text-align: center;
   line-height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 8rem;
+  margin-top: 4rem;
   display: block;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 

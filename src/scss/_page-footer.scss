@@ -95,6 +95,15 @@
     height: 1.4rem;
     flex-shrink: 0;
     fill: rgba(white, 0.5);
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        fill: white;
+      }
+    }
   }
 }
 

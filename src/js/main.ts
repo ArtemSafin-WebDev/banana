@@ -13,8 +13,11 @@ import press from "./press";
 import team from "./team";
 import subscribe from "./subscribe";
 import strat from "./strat";
+import smoothScrolling from "./smoothScrolling";
+import loader from "./loader";
 
 document.addEventListener("DOMContentLoaded", () => {
+  smoothScrolling();
   accordions();
   tabs();
   menu();
@@ -28,12 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   team();
   subscribe();
   strat();
+  loader();
 });
 
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
-
-  setTimeout(() => {
-    document.body.classList.add("loader-hidden");
-  });
 });

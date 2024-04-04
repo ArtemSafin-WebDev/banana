@@ -457,6 +457,31 @@
     text-transform: uppercase;
     color: #f1ae5b;
     min-height: 26rem;
+    overflow: hidden;
+    &::before {
+      content: "";
+      inset: 0;
+      background: radial-gradient(
+        49.09% 49.09% at 50% 50%,
+        #f1ae5b 0%,
+        rgba(241, 174, 91, 0.15) 79%,
+        rgba(241, 174, 91, 0) 100%
+      );
+
+      transform: scale(1.4);
+      position: absolute;
+      filter: blur(100px);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          opacity: 0.4;
+        }
+      }
+    }
     .portfolio__list-wrapper:has(
         .portfolio__list-item:nth-child(even):last-child
       )

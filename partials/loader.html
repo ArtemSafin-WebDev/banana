@@ -1,10 +1,23 @@
 <div class="loader">
     <div class="loader__inner">
-        <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" fill="#F1AE5B" />
-            <rect x="46" width="40" height="40" fill="#E48E44" />
-            <rect x="46" y="46" width="40" height="40" fill="#F1AE5B" />
-        </svg>
+        <div class="loader__squares">
+            <div class="loader__square">
+                <div class="loader__square-inner">
+
+                </div>
+            </div>
+            <div class="loader__square">
+                <div class="loader__square-inner">
+
+                </div>
+            </div>
+            <div class="loader__square">
+                <div class="loader__square-inner">
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 
@@ -26,6 +39,42 @@
         height: 8.6rem;
 
     }
+
+    .loader__squares {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+
+    }
+
+    .loader__square {
+
+        padding: 0.3rem;
+    }
+
+    .loader__square-inner {
+        background-color: #F1AE5B;
+    }
+
+
+
+    .loader__square:nth-child(2) .loader__square-inner {
+        background-color: #E48E44;
+    }
+
+    .loader__square-inner::before {
+        content: '';
+        padding-bottom: 100%;
+        display: block;
+    }
+
+    .loader__square:nth-child(3) {
+        grid-column: 2 / 3;
+    }
+
+
+
+
 
     @media (max-width: 640px) {
         .loader__inner {
