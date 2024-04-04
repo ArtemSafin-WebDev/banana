@@ -90,21 +90,46 @@
 
 .partners__list-item {
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 200vw;
-    background: linear-gradient(
-      180deg,
-      rgba(13, 13, 13, 0) 30.85%,
-      #0d0d0d 100%
-    );
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    // background: linear-gradient(180deg, red 30.85%, #0d0d0d 100%);
+  z-index: 1;
+
+  @include breakpointMF(small-tablet) {
+    &:nth-child(6n + 1) {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 200vw;
+        background: linear-gradient(
+          180deg,
+          rgba(13, 13, 13, 0) 30.85%,
+          #0d0d0d 100%
+        );
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    &:nth-child(3n + 1) {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 200vw;
+        background: linear-gradient(
+          180deg,
+          rgba(13, 13, 13, 0) 30.85%,
+          #0d0d0d 100%
+        );
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
 

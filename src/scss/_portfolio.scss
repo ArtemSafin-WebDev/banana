@@ -456,7 +456,7 @@
     line-height: 120%;
     text-transform: uppercase;
     color: #f1ae5b;
-
+    min-height: 26rem;
     .portfolio__list-wrapper:has(
         .portfolio__list-item:nth-child(even):last-child
       )

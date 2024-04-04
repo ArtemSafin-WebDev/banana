@@ -12,6 +12,7 @@ import ticker from "./ticker";
 import press from "./press";
 import team from "./team";
 import subscribe from "./subscribe";
+import strat from "./strat";
 
 document.addEventListener("DOMContentLoaded", () => {
   accordions();
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   press();
   team();
   subscribe();
+  strat();
 });
 
 window.addEventListener("load", () => {
