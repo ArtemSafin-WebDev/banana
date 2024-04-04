@@ -1,6 +1,6 @@
 .intro {
   @include blockWrapper;
-  padding-top: 26rem;
+  padding-top: 15rem;
   margin-bottom: 21rem;
 
   @include breakpoint(mobile) {
@@ -28,7 +28,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14rem;
-  line-height: 90%;
+  line-height: 85%;
   text-indent: 7rem;
 
   @include breakpointMF(small-tablet) {
