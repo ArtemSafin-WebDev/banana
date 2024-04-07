@@ -1,0 +1,26 @@
+.large-text {
+  margin: calc(9rem * var(--scale-factor, 1)) 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(2.8rem * var(--scale-factor, 1));
+  line-height: 140%;
+  letter-spacing: -0.03em;
+}
+
+.large-text:first-child {
+  margin-top: 0;
+}
+.large-text:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .large-text {
+    margin: calc(6rem * var(--scale-factor, 1)) 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(1.6rem * var(--scale-factor, 1));
+    line-height: 130%;
+    color: white;
+  }
+}

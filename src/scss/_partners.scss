@@ -90,7 +90,7 @@
 
 .partners__list-item {
   position: relative;
-  z-index: 1;
+  z-index: 43;
 
   @include breakpointMF(small-tablet) {
     &:nth-child(6n + 1) {
@@ -136,6 +136,7 @@
 .partners__card {
   position: relative;
   z-index: 41;
+  display: block;
   &::before {
     content: "";
     display: block;
@@ -285,9 +286,13 @@
   aspect-ratio: 210 / 120;
   object-fit: contain;
   transform: translate(-50%, -50%);
-  width: 21rem;
+  width: 70%;
   height: auto;
   transition: opacity 0.2s, visibility 0.2s;
+
+  @include breakpoint(mobile) {
+    width: 90%;
+  }
 
   &:nth-of-type(2) {
     opacity: 0;

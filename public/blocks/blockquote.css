@@ -1,0 +1,173 @@
+.blockquote {
+  margin: calc(10rem * var(--scale-factor, 1)) 0;
+  position: relative;
+  padding: calc(6rem * var(--scale-factor, 1));
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: calc(4rem * var(--scale-factor, 1));
+  background: #0d0d0d;
+}
+
+@media (max-width: 640px) {
+  .blockquote {
+    margin: calc(6rem * var(--scale-factor, 1)) 0;
+    padding: calc(3.2rem * var(--scale-factor, 1))
+      calc(2rem * var(--scale-factor, 1));
+    gap: calc(2.4rem * var(--scale-factor, 1));
+  }
+}
+
+.blockquote__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(2.8rem * var(--scale-factor, 1));
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .blockquote__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(1.6rem * var(--scale-factor, 1));
+    line-height: 130%;
+  }
+}
+
+.blockquote__author {
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(1.8rem * var(--scale-factor, 1));
+  line-height: 140%;
+}
+
+@media (max-width: 640px) {
+  .blockquote__author {
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(1.4rem * var(--scale-factor, 1));
+    line-height: 140%;
+    letter-spacing: -0.03em;
+  }
+}
+
+.blockquote:first-child {
+  margin-top: 0;
+}
+
+.blockquote:last-child {
+  margin-bottom: 0;
+}
+
+.blockquote__pattern {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+.blockquote__pattern > span:nth-child(1) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.blockquote__pattern > span:nth-child(1):before,
+.blockquote__pattern > span:nth-child(1):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(3.2rem * var(--scale-factor, 1));
+  height: 1px;
+  background-color: #f1ae5b;
+}
+@media only screen and (max-width: 640px) {
+  .blockquote__pattern > span:nth-child(1):before,
+  .blockquote__pattern > span:nth-child(1):after {
+    width: calc(2rem * var(--scale-factor, 1));
+  }
+}
+.blockquote__pattern > span:nth-child(1):after {
+  transform: rotate(90deg);
+  transform-origin: left top;
+  margin-left: 1px;
+}
+.blockquote__pattern > span:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.blockquote__pattern > span:nth-child(2):before,
+.blockquote__pattern > span:nth-child(2):after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(3.2rem * var(--scale-factor, 1));
+  height: 1px;
+  background-color: #f1ae5b;
+}
+@media only screen and (max-width: 640px) {
+  .blockquote__pattern > span:nth-child(2):before,
+  .blockquote__pattern > span:nth-child(2):after {
+    width: calc(2rem * var(--scale-factor, 1));
+  }
+}
+.blockquote__pattern > span:nth-child(2):after {
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  margin-right: 1px;
+}
+.blockquote__pattern > span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.blockquote__pattern > span:nth-child(3):before,
+.blockquote__pattern > span:nth-child(3):after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(3.2rem * var(--scale-factor, 1));
+  height: 1px;
+  background-color: #f1ae5b;
+}
+@media only screen and (max-width: 640px) {
+  .blockquote__pattern > span:nth-child(3):before,
+  .blockquote__pattern > span:nth-child(3):after {
+    width: calc(2rem * var(--scale-factor, 1));
+  }
+}
+.blockquote__pattern > span:nth-child(3):after {
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  margin-left: 1px;
+}
+.blockquote__pattern > span:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.blockquote__pattern > span:nth-child(4):before,
+.blockquote__pattern > span:nth-child(4):after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(3.2rem * var(--scale-factor, 1));
+  height: 1px;
+  background-color: #f1ae5b;
+}
+@media only screen and (max-width: 640px) {
+  .blockquote__pattern > span:nth-child(4):before,
+  .blockquote__pattern > span:nth-child(4):after {
+    width: calc(2rem * var(--scale-factor, 1));
+  }
+}
+.blockquote__pattern > span:nth-child(4):after {
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  margin-right: 1px;
+}

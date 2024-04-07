@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {{> meta }}
+        <link rel="stylesheet" href="/blocks/large-text.css">
+        <link rel="stylesheet" href="/blocks/image-slider.css">
+        <link rel="stylesheet" href="/blocks/blockquote.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="/blocks/image-slider.js"></script>
+    </head>
+
+    <body>
+        <div class="main-ui">
+            {{> header }}
+            <main class="page-main">
+                {{> article }}
+                {{> other-articles }}
+            </main>
+            {{> footer }}
+
+        </div>
+        {{!-- <canvas class="light-splatter" width="2940" height="1446" style="opacity: 1;"></canvas> --}}
+        {{> modals }}
+        {{> loader }}
+
+
+        <script type="module" src="/src/js/main.ts"></script>
+    </body>
+
+</html>

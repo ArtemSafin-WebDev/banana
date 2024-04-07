@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {{> meta }}
+    </head>
+
+    <body>
+        <div class="main-ui">
+            {{> header }}
+            <main class="page-main">
+                {{> portfolio-catalog }}
+            </main>
+            {{> footer }}
+
+
+        </div>
+        {{!-- <canvas class="light-splatter" width="2940" height="1446" style="opacity: 1;"></canvas> --}}
+        {{> modals }}
+        {{> loader }}
+
+
+        <script type="module" src="/src/js/main.ts"></script>
+    </body>
+
+</html>

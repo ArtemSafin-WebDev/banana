@@ -333,6 +333,11 @@
   visibility: hidden;
   transition: opacity 0.2s, visibility 0s linear 0.2s;
 
+  @include breakpoint(mobile) {
+    visibility: inherit;
+    opacity: 1;
+  }
+
   svg {
     position: absolute;
     left: 0;

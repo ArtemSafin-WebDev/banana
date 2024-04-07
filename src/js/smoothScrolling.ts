@@ -34,7 +34,7 @@ export default function smoothScrolling() {
 
   //@ts-ignore
   let getPosition = getScrollLookup("section", {
-    pinnedContainer: ".strat__wrapper",
+    pinnedContainer: ".strats__wrapper",
   });
 
   document.addEventListener("click", (event) => {

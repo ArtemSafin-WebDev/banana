@@ -113,7 +113,11 @@ export default function loader() {
 
   tl.timeScale(5);
 
-  setTimeout(() => {
+  window.addEventListener("load", () => {
     document.body.classList.add("loader-hidden");
   });
+
+  setTimeout(() => {
+    document.body.classList.add("loader-hidden");
+  }, 4000);
 }

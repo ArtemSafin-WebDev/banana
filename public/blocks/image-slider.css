@@ -1,0 +1,160 @@
+.image-gallery {
+  margin: calc(10rem * var(--scale-factor, 1)) 0;
+  position: relative;
+  z-index: 43;
+  pointer-events: all;
+}
+
+.image-gallery:first-child {
+  margin-top: 0;
+}
+.image-gallery:last-child {
+  margin-bottom: 0;
+}
+
+.image-gallery__wrapper {
+  position: relative;
+}
+
+.image-gallery__fraction-pagination.image-gallery__fraction-pagination.image-gallery__fraction-pagination.image-gallery__fraction-pagination {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(1.8rem * var(--scale-factor, 1));
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.image-gallery__arrow {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: calc(1.8rem * var(--scale-factor, 1));
+  height: calc(1.8rem * var(--scale-factor, 1));
+  transition: opacity 0.2s;
+}
+
+.image-gallery__arrow svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: fill 0.2s, stroke 0.2s;
+}
+
+.image-gallery__arrow svg path {
+  stroke: white;
+  transition: stroke 0.2s;
+}
+
+.image-gallery__arrow:not(.swiper-button-disabled):hover svg path {
+  stroke: #f1ae5b;
+}
+
+.image-gallery__arrow.swiper-button-disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.image-gallery__arrow--prev {
+  right: 100%;
+  margin-right: calc(2rem * var(--scale-factor, 1));
+}
+.image-gallery__arrow--next {
+  left: 100%;
+  margin-left: calc(2rem * var(--scale-factor, 1));
+}
+
+.image-gallery__card {
+  position: relative;
+}
+
+.image-gallery__card::before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.image-gallery__card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-gallery__text-slider {
+  margin-top: calc(2rem * var(--scale-factor, 1));
+}
+
+.image-gallery__text-slider-card {
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(1.8rem * var(--scale-factor, 1));
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: default;
+}
+
+.image-gallery__bullets-pagination.image-gallery__bullets-pagination.image-gallery__bullets-pagination.image-gallery__bullets-pagination {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .image-gallery__fraction-pagination.image-gallery__fraction-pagination.image-gallery__fraction-pagination.image-gallery__fraction-pagination {
+    display: none !important;
+  }
+  .image-gallery__arrow {
+    display: none;
+  }
+  .image-gallery {
+    margin: calc(6rem * var(--scale-factor, 1)) 0;
+  }
+
+  .image-gallery__text-slider {
+    margin-top: calc(0.8rem * var(--scale-factor, 1));
+  }
+
+  .image-gallery__text-slider-card {
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(1.2rem * var(--scale-factor, 1));
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .image-gallery__bullets-pagination.image-gallery__bullets-pagination.image-gallery__bullets-pagination.image-gallery__bullets-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(0.8rem * var(--scale-factor, 1));
+    gap: calc(0.4rem * var(--scale-factor, 1));
+  }
+
+  .image-gallery__bullets-pagination.image-gallery__bullets-pagination.image-gallery__bullets-pagination.image-gallery__bullets-pagination
+    .swiper-pagination-bullet {
+    width: calc(0.4rem * var(--scale-factor, 1));
+    height: calc(0.4rem * var(--scale-factor, 1));
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    opacity: 1;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 !important;
+  }
+
+  .image-gallery__bullets-pagination.image-gallery__bullets-pagination.image-gallery__bullets-pagination.image-gallery__bullets-pagination
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #f1ae5b;
+  }
+}
