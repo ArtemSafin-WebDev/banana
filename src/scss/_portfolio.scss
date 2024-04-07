@@ -444,65 +444,32 @@
 }
 
 .portfolio__show-more {
-  @include breakpointMF(small-tablet) {
-    text-align: center;
-    display: grid;
-    place-items: center;
-    border: 1px solid rgba(241, 174, 91, 0.3);
-    background-color: #020202;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 120%;
-    text-transform: uppercase;
-    color: #f1ae5b;
-    min-height: 26rem;
-    overflow: hidden;
-    &::before {
-      content: "";
-      inset: 0;
-      background: radial-gradient(
-        49.09% 49.09% at 50% 50%,
-        #f1ae5b 0%,
-        rgba(241, 174, 91, 0.15) 79%,
-        rgba(241, 174, 91, 0) 100%
-      );
-
-      transform: scale(1.4);
-      position: absolute;
-      filter: blur(100px);
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        &::before {
-          opacity: 0.4;
-        }
-      }
-    }
-    .portfolio__list-wrapper:has(
-        .portfolio__list-item:nth-child(even):last-child
-      )
-      & {
-      grid-column: span 2;
-    }
-    &:link,
-    &:visited {
-      color: #f1ae5b;
-    }
-  }
+  padding: 2.7rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+  display: block;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
   @include breakpoint(mobile) {
-    text-align: center;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    order: 10;
+    margin-top: 2rem;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 100%;
     padding: 1.9rem;
+    margin-top: 2rem;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: white;
+    }
   }
 }
 

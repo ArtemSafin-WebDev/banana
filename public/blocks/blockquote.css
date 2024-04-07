@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: calc(4rem * var(--scale-factor, 1));
   background: #0d0d0d;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 640px) {

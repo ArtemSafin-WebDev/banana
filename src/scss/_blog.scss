@@ -236,6 +236,10 @@
   letter-spacing: -0.03em;
   color: rgba(#f1ae5b, 0.67);
   margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 
   @include breakpoint(mobile) {
     font-style: normal;
@@ -243,5 +247,20 @@
     font-size: 1.4rem;
     line-height: 130%;
     margin-bottom: 1.6rem;
+  }
+}
+
+.blog__slider-card-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  &:first-child {
+    &::before {
+      content: "/";
+    }
+  }
+
+  &:after {
+    content: "/";
   }
 }
