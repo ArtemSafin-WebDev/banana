@@ -1,0 +1,41 @@
+.policy {
+  display: flex;
+  flex-direction: column;
+  padding-top: 22rem;
+  margin-bottom: 20rem;
+  @include blockWrapper;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 10rem;
+    padding-top: 12.4rem;
+  }
+}
+
+.policy__content {
+  @include blockContent;
+}
+
+.policy__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11.5rem;
+  line-height: 90%;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+  margin-bottom: 8rem;
+  text-align: center;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 100%;
+    margin-bottom: 4rem;
+  }
+}
+
+.policy__text-content {
+  & > * {
+    color: white !important;
+  }
+}

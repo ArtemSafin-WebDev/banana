@@ -5,10 +5,121 @@
   @include breakpoint(mobile) {
     margin-bottom: 10rem;
   }
+
+  &--page {
+    margin: 0;
+    padding-top: 22rem;
+    padding-bottom: 15rem;
+
+    @include breakpoint(mobile) {
+      padding-top: 12.4rem;
+      padding-bottom: 6rem;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .team__content {
   @include blockContent;
+}
+
+.team__row {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 8rem;
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    gap: 1.2rem;
+  }
+}
+
+.team__page-heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11.5rem;
+  line-height: 90%;
+  grid-column: 5 / -1;
+  text-align: left;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 100%;
+  }
+}
+
+.team__back-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: rgba(white, 0.4);
+  justify-self: flex-start;
+  align-items: flex-start;
+  grid-column: 1 / 5;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: -0.03em;
+    line-height: 140%;
+  }
+
+  &:link,
+  &:visited {
+    color: rgba(white, 0.4);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.team__page-list {
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: 1fr;
+
+    .team__slider-card-title::before {
+      background-color: white;
+    }
+  }
+}
+
+.team__page-list-item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  box-sizing: border-box;
+
+  @include breakpointMF(small-tablet) {
+    border: 1px solid #1f1f1f;
+    margin-left: -1px;
+    margin-top: -1px;
+    width: auto;
+  }
+
+  @include breakpoint(mobile) {
+    margin-top: -1px;
+  }
 }
 
 .team__heading {
@@ -51,6 +162,7 @@
       border: 1px solid #1f1f1f;
       margin-left: -1px;
       margin-top: -1px;
+      width: auto;
     }
 
     @include breakpoint(mobile) {
@@ -86,6 +198,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+
   &:link,
   &:visited {
     color: #f1ae5b;
@@ -119,6 +232,7 @@
   @include breakpointMF(small-tablet) {
     margin-left: -1px;
     margin-top: -1px;
+    min-height: 22rem;
   }
 }
 

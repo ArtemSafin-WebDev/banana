@@ -54,6 +54,12 @@
   &:visited {
     color: rgba(white, 0.4);
   }
+
+  @media (hover: hover) {
+    &:hover {
+      color: white;
+    }
+  }
 }
 
 .portfolio-catalog__heading {

@@ -1,6 +1,8 @@
 .blog {
   @include blockWrapper;
   margin-bottom: 12rem;
+  position: relative;
+  z-index: 43;
 
   @include breakpoint(mobile) {
     margin-bottom: 6rem;
