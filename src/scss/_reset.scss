@@ -227,34 +227,6 @@ select:-webkit-autofill:focus {
   overflow: clip;
 }
 
-canvas.light-splatter {
-  top: 0;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 15;
-
-  @include breakpoint(mobile) {
-    display: none;
-  }
-}
-
-.main-ui {
-  @include breakpointMF(small-tablet) {
-    pointer-events: none;
-
-    button,
-    a,
-    .about__card,
-    input {
-      z-index: 41;
-      position: relative;
-      pointer-events: auto;
-    }
-  }
-}
-
 .lenis.lenis-smooth {
   scroll-behavior: auto;
 }
@@ -265,4 +237,13 @@ canvas.light-splatter {
 
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+.video-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
