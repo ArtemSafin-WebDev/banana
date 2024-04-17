@@ -20,17 +20,10 @@
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.6;
+  // opacity: 0.6;
 
   @include breakpoint(mobile) {
     display: none;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: #c59559;
-    mix-blend-mode: soft-light;
   }
 }
 
