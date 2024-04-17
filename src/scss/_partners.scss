@@ -285,10 +285,11 @@
   top: 50%;
   aspect-ratio: 210 / 120;
   object-fit: contain;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateZ(0);
   width: 70%;
   height: auto;
   transition: opacity 0.2s, visibility 0.2s;
+  backface-visibility: hidden;
 
   @include breakpoint(mobile) {
     width: 90%;

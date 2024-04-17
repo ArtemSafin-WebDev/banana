@@ -155,26 +155,19 @@
   min-height: 26rem;
   pointer-events: all;
   overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: radial-gradient(
-      49.09% 49.09% at 50% 50%,
-      #f1ae5b 0%,
-      rgba(241, 174, 91, 0.15) 79%,
-      rgba(241, 174, 91, 0) 100%
-    );
-    opacity: 0.5;
-    filter: blur(100px);
-    width: 33.7rem;
-    height: 33.7rem;
-    left: -15rem;
+    inset: 0;
     pointer-events: none;
     z-index: -1;
     transition: opacity 0.2s;
     opacity: 0;
+    background-image: url("../images/team-card-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   @media (hover: hover) {
@@ -329,6 +322,8 @@
   font-size: 2.6rem;
   line-height: 120%;
   letter-spacing: -0.03em;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 
   @include breakpoint(mobile) {
     font-style: normal;
@@ -343,7 +338,8 @@
   width: auto;
   margin-left: auto;
   flex-shrink: 0;
-
+  backface-visibility: hidden;
+  transform: translateZ(0);
   @include breakpoint(mobile) {
     height: 3rem;
   }

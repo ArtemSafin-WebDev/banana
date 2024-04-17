@@ -15,7 +15,7 @@
   @include breakpoint(mobile) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas: "email email" "nav nav" "logo social" "copyright copyright";
+    grid-template-areas: "email email" "nav nav" "logo social" "copyright copyright" "madeby madeby";
   }
 }
 
@@ -33,13 +33,62 @@
 .page-footer__bottom-row {
   padding-top: 2rem;
   padding-bottom: 1.5rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  grid-gap: 2rem;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
 
   @include breakpoint(mobile) {
     display: contents;
+  }
+}
+
+.page-footer__made-by {
+  display: flex;
+  align-items: center;
+  grid-column: 11 / 15;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+  letter-spacing: -0.03em;
+
+  transition: color 0.2s;
+  gap: 1rem;
+
+  opacity: 0.4;
+  transition: opacity 0.2s;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    grid-column: 1 / -1;
+
+    position: relative;
+    grid-area: madeby;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    flex-shrink: 0;
+    width: 8.8rem;
+    height: auto;
+    position: relative;
+    bottom: -0.15rem;
+
+    @include breakpoint(mobile) {
+      width: 8rem;
+      bottom: -0.1rem;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -50,6 +99,8 @@
   line-height: 130%;
   letter-spacing: -0.03em;
   color: rgba(white, 0.4);
+  grid-column: 1 / 11;
+  justify-self: flex-start;
 
   @include breakpoint(mobile) {
     font-style: normal;
@@ -85,6 +136,7 @@
   font-size: 1.4rem;
   line-height: 130%;
   letter-spacing: -0.03em;
+  grid-column: 15 / -1;
 
   @include breakpoint(mobile) {
     display: none;

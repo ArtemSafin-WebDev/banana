@@ -13,11 +13,11 @@ import press from "./press";
 import team from "./team";
 import subscribe from "./subscribe";
 import strat from "./strat";
-// import smoothScrolling from "./smoothScrolling";
+import smoothScrolling from "./smoothScrolling";
 import loader from "./loader";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // smoothScrolling();
+  smoothScrolling();
   accordions();
   tabs();
   menu();
