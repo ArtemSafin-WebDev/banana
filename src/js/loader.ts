@@ -115,9 +115,11 @@ export default function loader() {
 
   window.addEventListener("load", () => {
     document.body.classList.add("loader-hidden");
+    tl.kill();
   });
 
   setTimeout(() => {
     document.body.classList.add("loader-hidden");
-  }, 4000);
+    tl.kill();
+  }, 10000);
 }
